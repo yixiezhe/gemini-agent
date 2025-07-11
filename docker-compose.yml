@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  gemini-agent:
+    image: aialpha/gemini-agent:latest # <-- 修改这里，不再使用 build
+    container_name: gemini-agent-container
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./project_files:/workspace
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
