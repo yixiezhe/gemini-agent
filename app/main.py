@@ -11,10 +11,10 @@ app = Flask(__name__)
 
 # 从环境变量中读取你的 Google AI API Key
 # 建议使用 .env 文件或 Docker 的 secrets 管理
-genai.configure(api_key="AIzaSyCofFS515V7yyLa3nfpEgYVViSmtVODLAQ") # 替换成你的 API Key
+genai.configure(api_key="AIzaSyDAz-8VSxbHNCzykRq9gJwAI-ANRvI-2bc") # 替换成你的 API Key
 
 # 初始化 Gemini 模型
-model = genai.GenerativeModel('gemini-1.5-pro-latest') # 或者 gemini-pro
+model = genai.GenerativeModel('gemini-pro') # 或者 gemini-pro
 
 # 定义工作目录 (这是在容器内的路径)
 PROJECT_DIR = "/workspace"
