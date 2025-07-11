@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   gemini-agent:
-    image: aialpha/gemini-agent:latest # <-- 修改这里，不再使用 build
+    build: . # <-- 改回这一行，让它在云端自己建造
     container_name: gemini-agent-container
     ports:
       - "5000:5000"
