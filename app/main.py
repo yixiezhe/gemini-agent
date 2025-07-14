@@ -4,6 +4,7 @@ import google.generativeai as genai
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False # <--- 添加这一行
 
 # --- 安全提示 ---
 # 在生产环境中，执行来自 AI 的任意代码非常危险。
